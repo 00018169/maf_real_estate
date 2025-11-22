@@ -1,0 +1,110 @@
+body {
+    background-color: #f0f4f8;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #1a202c;
+    padding-top: 80px;
+}
+
+.navbar {
+    background-color: #0d2538 !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar-brand {
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+}
+
+.card-header {
+    background-color: #fff;
+    border-bottom: 1px solid #e2e8f0;
+    border-radius: 12px 12px 0 0 !important;
+    font-weight: 600;
+    color: #0d2538;
+}
+
+.card-img-top {
+    border-radius: 12px 12px 0 0;
+    height: 220px;
+    object-fit: cover;
+}
+
+.card-title {
+    color: #0d2538;
+    font-weight: 700;
+}
+
+.text-primary {
+    color: #2b6cb0 !important;
+}
+
+.btn-primary {
+    background-color: #2b6cb0;
+    border-color: #2b6cb0;
+    border-radius: 8px;
+    font-weight: 500;
+    padding: 8px 16px;
+}
+
+.btn-primary:hover {
+    background-color: #2c5282;
+    border-color: #2c5282;
+}
+
+.btn-outline-primary {
+    color: #2b6cb0;
+    border-color: #2b6cb0;
+    border-radius: 8px;
+}
+
+.btn-outline-primary:hover {
+    background-color: #2b6cb0;
+    color: #fff;
+}
+
+.btn-success {
+    background-color: #38a169;
+    border: none;
+    border-radius: 8px;
+}
+
+.form-control {
+    border-radius: 8px;
+    border: 1px solid #cbd5e0;
+    padding: 10px;
+}
+
+.form-control:focus {
+    border-color: #2b6cb0;
+    box-shadow: 0 0 0 3px rgba(43, 108, 176, 0.2);
+}
+
+.badge {
+    border-radius: 6px;
+    font-weight: 500;
+    padding: 5px 10px;
+}
+
+.bg-info {
+    background-color: #e6fffa !important;
+    color: #2c7a7b;
+    border: 1px solid #b2f5ea;
+}
+
+.bg-secondary {
+    background-color: #edf2f7 !important;
+    color: #4a5568;
+    border: 1px solid #e2e8f0;
+}

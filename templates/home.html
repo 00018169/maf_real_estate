@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load humanize %}
+
+{% block content %}
+<div class="row mb-4">
+    <div class="col-md-8 mx-auto">
+        <form method="GET" action="" class="d-flex">
+            <input class="form-control me-2" type="search" name="q" placeholder="Search ..." aria-label="Search"
+                value="{{ request.GET.q|default:'' }}">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+    </div>
+</div>
+
+<div class="row">
+    {% for property in properties %}
+    <div class="col-md-4 mb-4">
+        <div class="card h-100">
+            {% if property.image %}
+            <img src="{{ property.image.url }}" class="card-img-top" alt="{{ property.title }}">
+            {% else %}
+            <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="No image">
+            {% endif %}
+            <div class="card-body">
+                <h5 class="card-title">{{ property.title }}</h5>
+                <p class="card-text text-muted">{{ property.city }}</p>
+                <h6 class="text-primary">${{ property.price|floatformat:0|intcomma }}</h6>
+                <span class="badge bg-info">{{ property.get_property_type_display }}</span>
+                <span class="badge bg-secondary">{{ property.bedrooms }} Beds</span>
+                <span class="badge bg-secondary">{{ property.bathrooms }} Baths</span>
+                <p class="card-text mt-2">{{ property.description|truncatechars:100 }}</p>
+                <a href="{% url 'property_detail' property.pk %}" class="btn btn-primary btn-sm">View Details</a>
+            </div>
+        </div>
+    </div>
+    {% empty %}
+    <div class="col-12 text-center">
+        <p>No properties found.</p>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

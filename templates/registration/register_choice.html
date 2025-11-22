@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="row justify-content-center text-center">
+    <div class="col-md-8">
+        <h2>Choose Account Type</h2>
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h3>For Agents</h3>
+                        <p>List properties, manage appointments, and reach more clients.</p>
+                        <a href="{% url 'register_agent' %}" class="btn btn-primary">Register as Agent</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h3>For Buyers</h3>
+                        <p>Search homes, book viewings, and find your dream house.</p>
+                        <a href="{% url 'register_buyer' %}" class="btn btn-success">Register as Buyer</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
