@@ -76,7 +76,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'real_estate.wsgi.application'
+WSGI_APPLICATION = 'maf_real_estate.wsgi.application'
 
 
 # Database

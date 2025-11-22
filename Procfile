@@ -1,2 +1,2 @@
-web: gunicorn real_estate.wsgi:application
+web: gunicorn maf_real_estate.wsgi:application
 
